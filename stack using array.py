@@ -23,15 +23,16 @@ class Stack:
         return poped_data 
     def __repr__(self):
         ans="Stack("
-        i=0
-        while i!=self.top:
+        i=self.top
+        while i:
             ans+=f"{self.arr[i]},"
-            i+=1
+            i-=1
         return ans[:-1]+")"
 s=Stack(10)
 
 for i in range(10):
     s.push(i+1)
+print(s)
 for i in range(5):
-    s.pop()
+    print(s.pop())
 print(s)
